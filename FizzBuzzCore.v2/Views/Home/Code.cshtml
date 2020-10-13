@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "Code";
+}
+
+<div class="row">
+    <div class="col text-center">
+        <h1>The Code</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col text-center">
+        <h4>The following code is displayed using PrismJS</h4>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col text-center">
+        <pre>
+<code class="language-js line-numbers">[HttpPost]
+    public IActionResult Solve(string userIn1, string userIn2)
+    {
+        var fizzBuzzModel = new FizzBuzz();
+        fizzBuzzModel.Fizz = Convert.ToInt32(userIn1);
+        fizzBuzzModel.Buzz = Convert.ToInt32(userIn2);
+
+        var output = "";
+        for (int i = 1; i <= 100; i++)
+        {
+            if (i % fizzBuzzModel.Fizz == 0 && i % fizzBuzzModel.Buzz == 0)
+            {
+                output += "FizzBuzz, ";
+            }
+            else if (i % fizzBuzzModel.Fizz == 0)
+            {
+                output += "Fizz, ";
+            }
+            else if (i % fizzBuzzModel.Buzz == 0)
+            {
+                output += "Buzz, ";
+            }
+            else
+            {
+                output += i + ", ";
+            }
+        }
+
+        fizzBuzzModel.Output = output;
+        return RedirectToAction("Result", fizzBuzzModel);
+    }
+
+</code>
+</pre>
+    </div>
+</div>
+
