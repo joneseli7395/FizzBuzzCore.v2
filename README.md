@@ -1,4 +1,4 @@
-# FizzBuzzCore.v2
- FizzBuzz in C# using a model
+# The FizzBuzz challenge...but written in C#
+ ## And uses a model
 
 Check out my [portfolio](https://www.ejdevspot.com/)
